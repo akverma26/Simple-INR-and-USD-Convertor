@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ankitkumar.currencyconvertor.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ruImageView"
+            android:layout_width="94dp"
+            android:layout_height="108dp"
+            android:layout_below="@+id/amount"
+            android:layout_toStartOf="@+id/invert"
+            app:srcCompat="@drawable/ru"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="72dp" />
+
+        <ImageView
+            android:id="@+id/dolImageView"
+            android:layout_width="91dp"
+            android:layout_height="103dp"
+            android:layout_below="@+id/amount"
+            android:layout_toEndOf="@+id/invert"
+            app:srcCompat="@drawable/dol"
+            tools:layout_editor_absoluteX="277dp"
+            tools:layout_editor_absoluteY="72dp" />
+
+        <ImageButton
+            android:id="@+id/convertButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/dolImageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="21dp"
+            android:onClick="convert"
+            android:scaleX="2"
+            android:scaleY="1.5"
+            app:srcCompat="@android:drawable/ic_media_ff" />
+
+        <Button
+            android:id="@+id/invert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ruImageView"
+            android:layout_centerHorizontal="true"
+            android:onClick="invert"
+            android:text="Invert the Process" />
+
+        <EditText
+            android:id="@+id/amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:ems="10"
+            android:hint="Enter Amount"
+            android:inputType="numberSigned" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
